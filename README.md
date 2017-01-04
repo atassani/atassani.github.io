@@ -41,3 +41,5 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 - [Local Storage](javascript30/15-LocalStorage/)
 - [Speech Detection](javascript30/20-SpeechDetection/)
 - [Speech Synthesis](javascript30/23-SpeechSynthesis/)
+- D3
+  - [Basics](d3/index.html)
