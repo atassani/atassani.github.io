@@ -44,3 +44,4 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 - [Countdown Timer](javascript30/29-CountdownTimer/)
 - D3
   - [Basics](d3/index.html)
+  - [Bar and Transition](d3/v3_bar_and_transition.html)
