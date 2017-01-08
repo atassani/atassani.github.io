@@ -42,7 +42,7 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 - [Speech Detection](javascript30/20-SpeechDetection/)
 - [Speech Synthesis](javascript30/23-SpeechSynthesis/)
 - [Countdown Timer](javascript30/29-CountdownTimer/)
-- D3
+- D3 projects
   - [Basics](d3/index.html)
   - [Experiments](d3project/)
   - [Bar and Transition](d3project/v3_bar_and_transition.html)
