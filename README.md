@@ -42,8 +42,24 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 - [Speech Detection](javascript30/20-SpeechDetection/)
 - [Speech Synthesis](javascript30/23-SpeechSynthesis/)
 - [Countdown Timer](javascript30/29-CountdownTimer/)
+- [Whack a Mole](javascript30/30-WhackAMole/)
 - D3 projects
   - [Basics](d3/index.html)
   - [Experiments](d3project/)
   - [Bar and Transition](d3project/v3_bar_and_transition.html)
   - [Sort bars](d3project/v3_sort_bars.html)
+
+# D3 links
+- [D3 Home](https://d3js.org/)
+- [D3 on GitHub](https://github.com/d3/d3/wiki)
+- [D3 for mere mortals](http://www.recursion.org/d3-for-mere-mortals/)
+- [Getting to “Hello world” with d3 - Jerome Cukier](http://www.jeromecukier.net/blog/2012/09/04/getting-to-hello-world-with-d3/)
+- [Creating a d3 chart with data from Google Sheets](http://www.benlcollins.com/spreadsheets/d3-google-sheets/)
+- [D3.js tutorial - 2 - Select and Append](https://www.youtube.com/watch?list=PL6il2r9i3BqH9PmbOf5wA5E1wOG3FT22p&v=qIIKw2RFNlU&app=desktop)
+- [A visual explanation of the Enter, Update and Exit Selections in D3js](http://javascript.tutorialhorizon.com/2014/11/20/a-visual-explanation-of-the-enter-update-and-exit-selections-in-d3js/)
+- [tabletop](https://github.com/jsoma/tabletop)
+
+# D3 Galleries
+- [Gallery](https://github.com/d3/d3/wiki/Gallery)
+- [D3.js Gallery](http://christopheviau.com/d3list/gallery.html)
+- [Mike Bostock](http://bl.ocks.org/mbostock)
