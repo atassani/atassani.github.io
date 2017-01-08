@@ -197,90 +197,107 @@
 
   </script>
   <script type="text/javascript">
-  			// //Width and height
-  			// var w = 500;
-  			// var h = 300;
-  			// var padding = 30;
-        //
-  			// var dataset = [
-  			// 				[5, 20], [480, 90], [250, 50], [100, 33], [330, 95],
-  			// 				[410, 12], [475, 44], [25, 67], [85, 21], [220, 88],
-  			// 				[600, 150]
-  			// 			  ];
-        //
-  			// //Create scale functions
-  			// var xScale = d3.scaleLinear()
-  			// 					 .domain([0, d3.max(dataset, function(d) { return d[0]; })])
-  			// 					 .range([padding, w - padding * 2]);
-        //
-  			// var yScale = d3.scaleLinear()
-  			// 					 .domain([0, d3.max(dataset, function(d) { return d[1]; })])
-  			// 					 .range([h - padding, padding]);
-        //
-  			// var rScale = d3.scaleLinear()
-  			// 					 .domain([0, d3.max(dataset, function(d) { return d[1]; })])
-  			// 					 .range([2, 5]);
-        //
-  			// //Define X axis
-  			// var xAxis = d3.axisBottom()
-  			// 				  .scale(xScale)
-  			// 				  .ticks(5);
-        //
-  			// //Define Y axis
-  			// var yAxis = d3.axisLeft()
-  			// 				  .scale(yScale)
-  			// 				  .ticks(5);
-        //
-  			// //Create SVG element
-  			// var svg = d3.select("body")
-  			// 			.append("svg")
-  			// 			.attr("width", w)
-  			// 			.attr("height", h);
-        //
-  			// //Create circles
-  			// svg.selectAll("circle")
-  			//    .data(dataset)
-  			//    .enter()
-  			//    .append("circle")
-  			//    .attr("cx", function(d) {
-  			//    		return xScale(d[0]);
-  			//    })
-  			//    .attr("cy", function(d) {
-  			//    		return yScale(d[1]);
-  			//    })
-  			//    .attr("r", function(d) {
-  			//    		return rScale(d[1]);
-  			//    });
-        //
-  			// //Create labels
-  			// svg.selectAll("text")
-  			//    .data(dataset)
-  			//    .enter()
-  			//    .append("text")
-  			//    .text(function(d) {
-  			//    		return d[0] + "," + d[1];
-  			//    })
-  			//    .attr("x", function(d) {
-  			//    		return xScale(d[0]);
-  			//    })
-  			//    .attr("y", function(d) {
-  			//    		return yScale(d[1]);
-  			//    })
-  			//    .attr("font-family", "sans-serif")
-  			//    .attr("font-size", "11px")
-  			//    .attr("fill", "red");
-        //
-  			// //Create X axis
-  			// svg.append("g")
-  			// 	.attr("class", "axis")
-  			// 	.attr("transform", "translate(0," + (h - padding) + ")")
-  			// 	.call(xAxis);
-        //
-  			// //Create Y axis
-  			// svg.append("g")
-  			// 	.attr("class", "axis")
-  			// 	.attr("transform", "translate(" + padding + ",0)")
-  			// 	.call(yAxis);
+  			//Width and height
+  			var w = 500;
+  			var h = 300;
+  			var padding = 30;
+
+  			var dataset = [
+  							[5, 20], [480, 90], [250, 50], [100, 33], [330, 95],
+  							[410, 12], [475, 44], [25, 67], [85, 21], [220, 88],
+  							[600, 150]
+  						  ];
+
+  			//Create scale functions
+  			var xScale = d3.scaleLinear()
+  								 .domain([0, d3.max(dataset, function(d) { return d[0]; })])
+  								 .range([padding, w - padding * 2]);
+
+  			var yScale = d3.scaleLinear()
+  								 .domain([0, d3.max(dataset, function(d) { return d[1]; })])
+  								 .range([h - padding, padding]);
+
+  			var rScale = d3.scaleLinear()
+  								 .domain([0, d3.max(dataset, function(d) { return d[1]; })])
+  								 .range([2, 5]);
+
+  			//Define X axis
+  			var xAxis = d3.axisBottom()
+  							  .scale(xScale)
+  							  .ticks(5);
+
+  			//Define Y axis
+  			var yAxis = d3.axisLeft()
+  							  .scale(yScale)
+  							  .ticks(5);
+
+  			//Create SVG element
+  			var svg = d3.select("body")
+  						.append("svg")
+  						.attr("width", w)
+  						.attr("height", h);
+
+  			//Create circles
+  			svg.selectAll("circle")
+  			   .data(dataset)
+  			   .enter()
+  			   .append("circle")
+  			   .attr("cx", function(d) {
+  			   		return xScale(d[0]);
+  			   })
+  			   .attr("cy", function(d) {
+  			   		return yScale(d[1]);
+  			   })
+  			   .attr("r", function(d) {
+  			   		return rScale(d[1]);
+  			   });
+
+  			//Create labels
+  			svg.selectAll("text")
+  			   .data(dataset)
+  			   .enter()
+  			   .append("text")
+  			   .text(function(d) {
+  			   		return d[0] + "," + d[1];
+  			   })
+  			   .attr("x", function(d) {
+  			   		return xScale(d[0]);
+  			   })
+  			   .attr("y", function(d) {
+  			   		return yScale(d[1]);
+  			   })
+  			   .attr("font-family", "sans-serif")
+  			   .attr("font-size", "11px")
+  			   .attr("fill", "red");
+
+  			//Create X axis
+  			svg.append("g")
+  				.attr("class", "axis")
+  				.attr("transform", "translate(0," + (h - padding) + ")")
+  				.call(xAxis);
+
+  			//Create Y axis
+  			svg.append("g")
+  				.attr("class", "axis")
+  				.attr("transform", "translate(" + padding + ",0)")
+  				.call(yAxis);
+
+        // Event Compatibility Table between D3 and DOM events
+        //http://www.quirksmode.org/dom/events/
+
+        // Mike Bockstock. Object Constancy
+        //https://bost.ocks.org/mike/constancy/
+
+        // SCott Murray. Interactive Data Visualization for the Web
+        //http://alignedleft.com/work/d3-book
+
+        // D3 from cdnjs
+        //https://cdnjs.com/libraries/d3
+
+        // D3 from v3 to v4
+        //https://keithpblog.wordpress.com/2016/07/31/upgrading-d3-from-v3-to-v4/
+        //https://github.com/d3/d3/blob/master/CHANGES.md
+
         </script>
     </body>
 </html>

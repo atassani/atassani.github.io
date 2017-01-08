@@ -46,3 +46,4 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
   - [Basics](d3/index.html)
   - [Experiments](d3project/)
   - [Bar and Transition](d3project/v3_bar_and_transition.html)
+  - [Sort bars](d3project/v3_sort_bars.html)
