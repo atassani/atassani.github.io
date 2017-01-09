@@ -42,7 +42,8 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 - [Speech Detection](javascript30/20-SpeechDetection/)
 - [Speech Synthesis](javascript30/23-SpeechSynthesis/)
 - [Countdown Timer](javascript30/29-CountdownTimer/)
-- [Whack a Mole](javascript30/30-WhackAMole/)
+- [Whack a Mole](javascript30/30-w
+hackAMole/)
 - D3 projects
   - [Basics](d3/index.html)
   - [Experiments](d3project/)
