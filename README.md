@@ -48,6 +48,7 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
   - [Experiments](d3project/)
   - [Bar and Transition](d3project/v3_bar_and_transition.html)
   - [Sort bars](d3project/v3_sort_bars.html)
+  - [Load data](d3project/v3_load_data.html)
 
 # D3 links
 - [D3 Home](https://d3js.org/)
@@ -63,3 +64,11 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 - [Gallery](https://github.com/d3/d3/wiki/Gallery)
 - [D3.js Gallery](http://christopheviau.com/d3list/gallery.html)
 - [Mike Bostock](http://bl.ocks.org/mbostock)
+- []()
+
+# Other bookmarks
+- [Metodologías Ágiles de Desarrollo de Software](https://github.com/domingogallardo/mads-ua)
+- [2016-17_METODOLOGÍAS ÁGILES DE DESARROLLO DE SOFTWARE](https://moodle2016-17.ua.es/moodle/course/view.php?id=927)
+- [Dave Snowden: Humans are neither ants nor data processors [Keynote]](https://vimeo.com/190436631)
+- [Is Your Organization Ready for Agile Change?](http://leanchange.org/2016/10/is-your-organization-ready-for-agile-change/?mc_cid=7dfb413a8a&mc_eid=9bf72d9a47)
+- [Adjusting to the Agile UX Workflow](https://www.thoughtworks.com/es/insights/blog/adjusting-agile-ux-workflow)

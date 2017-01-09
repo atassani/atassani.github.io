@@ -1,0 +1,105 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+  <!--
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/lodash/4.14.1/lodash.min.js"></script>
+  <script type="text/javascript" src="https://rawgit.com/twitter/d3kit/v1.1.0/dist/d3kit.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular.min.js"></script>
+  <script src="https://rawgit.com/novus/nvd3/v1.8.2/build/nv.d3.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-nvd3/1.0.7/angular-nvd3.min.js"></script>
+  <script type="text/javascript" src="https://twitter.github.io/labella.js/dist/labella.js"></script>
+  <link rel="stylesheet" href="https://rawgit.com/novus/nvd3/v1.8.2/build/nv.d3.css">
+  <script src="https://rawgit.com/syntagmatic/parallel-coordinates/master/d3.parcoords.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sylvester/0.1.3/sylvester.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://syntagmatic.github.io/parallel-coordinates/d3.parcoords.css">
+-->
+  <script>
+  (function (global, factory) {
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+    typeof define === 'function' && define.amd ? define(['exports'], factory) :
+    (factory((global.d3 = global.d3 || {})));
+  }(this, function (exports) { 'use strict';
+    function gviz(key, sheet, query, parseDatatable, callback) {
+      if (arguments.length < 5) callback = parseDatatable, parseDatatable = function(table) {
+        var data = [];
+        for (var i = 0; i < table.getNumberOfRows(); i++) {
+          var row = {};
+          for (var j = 0; j < table.getNumberOfColumns(); j++) {
+            row[table.getColumnLabel(j)] = table.getValue(i, j);
+          }
+          data.push(row);
+        }
+        return data;
+      };
+      google.load("visualization", '1', {"callback" : visualizationLoaded});
+      function visualizationLoaded() {
+        var dataSourceUrl = 'https://docs.google.com/spreadsheets/d/' + key + '/gviz/tq?sheet=' + encodeURIComponent(sheet) + '&headers=1&access_token=' + encodeURIComponent(gapi.auth.getToken().access_token);
+        var q = new google.visualization.Query(dataSourceUrl);
+        q.setQuery(query);
+        q.send(function(response) {
+          if (response.isError()) {
+            alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+            return;
+          }
+          var table = response.getDataTable();
+          callback(parseDatatable(table));
+        });
+      };
+    };
+    exports.gviz = gviz;
+    Object.defineProperty(exports, '__esModule', { value: true });
+  }));
+  </script>
+</head>
+<body>
+  <script type="text/javascript">
+     function authorize() {
+       var clientId = '1081249692953-54e31ls3ontmhjtnh53crkg61upto185.apps.googleusercontent.com';
+       var scopes = 'https://spreadsheets.google.com/feeds';
+       return new Promise(function(resolve) {
+         function handleAuthResult(authResult) {
+           var authorizeButton = document.getElementById('authorize-button');
+           if (authResult && !authResult.error) {
+             authorizeButton.style.visibility = 'hidden';
+             resolve();
+           } else {
+             authorizeButton.style.visibility = '';
+             authorizeButton.onclick = handleAuthClick;
+           }
+         }
+         function handleAuthClick(event) {
+           gapi.auth.authorize(
+               {client_id: clientId, scope: scopes, immediate: false},
+               handleAuthResult);
+           return false;
+         }
+         gapi.auth.authorize(
+           {client_id: clientId, scope: scopes, immediate: true},
+           handleAuthResult);
+       });
+     }
+    function loadData() {
+      var key = '1CLUkLM228B65Mz2N7Zkz94Zek7JiABDkJ9qShYnc-50';
+      var sheet = 'Health Check';
+      var query = 'SELECT year(A), month(A), N, AVG(C), AVG(D), AVG(E), AVG(F), AVG(G), AVG(H), AVG(I), AVG(J), AVG(K), AVG(L), AVG(M), AVG(O) GROUP BY year(A), month(A), N ORDER BY N, year(A) DESC, month(A) DESC LABEL year(A) "Year", month(A) "Month", N "Team", AVG(C) "Learning", AVG(D) "Speed", AVG(E) "Pawns or Players", AVG(F) "Mission", AVG(G) "Health of Codebase", AVG(H) "Support", AVG(I) "Easy to Release", AVG(J) "Teamwork", AVG(K) "Suitable Process", AVG(L) "Fun", AVG(M) "Delivering Value", AVG(O) "Experimentation"';
+      d3.gviz(key, sheet, query, function(data) {
+        healthcheckScatterplot(data);
+        healthcheckTrendLines(data);
+      });
+    }
+    function init() {
+      authorize().then(loadData);
+    }
+  </script>
+
+  <div id="container">
+   <button id="authorize-button" style="visibility: hidden">Authorize</button>
+   <div id="chart_div"></div>
+   <div id="legend">
+        <div id="legend-chart">Loading...</div>
+   </div>
+   <script src="https://apis.google.com/js/auth.js?onload=init"></script>
+  </div>
+</body>
+</html>
