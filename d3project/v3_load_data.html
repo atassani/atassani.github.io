@@ -89,7 +89,9 @@
     function loadData() {
       var key = '1CLUkLM228B65Mz2N7Zkz94Zek7JiABDkJ9qShYnc-50';
       var sheet = 'Health Check';
-      var query = 'SELECT year(A), month(A), N, AVG(C), AVG(D), AVG(E), AVG(F), AVG(G), AVG(H), AVG(I), AVG(J), AVG(K), AVG(L), AVG(M), AVG(O) GROUP BY year(A), month(A), N ORDER BY N, year(A) DESC, month(A) DESC LABEL year(A) "Year", month(A) "Month", N "Team", AVG(C) "Learning", AVG(D) "Speed", AVG(E) "Pawns or Players", AVG(F) "Mission", AVG(G) "Health of Codebase", AVG(H) "Support", AVG(I) "Easy to Release", AVG(J) "Teamwork", AVG(K) "Suitable Process", AVG(L) "Fun", AVG(M) "Delivering Value", AVG(O) "Experimentation"';
+      var query = 'SELECT year(A), month(A), N, AVG(C), AVG(D), AVG(E), AVG(F), AVG(G), AVG(H), AVG(I), AVG(J), AVG(K), AVG(L), AVG(M), AVG(O) ' +
+                  'GROUP BY year(A), month(A), N ' +
+                  'ORDER BY N, year(A) DESC, month(A) DESC LABEL year(A) "Year", month(A) "Month", N "Team", AVG(C) "Learning", AVG(D) "Speed", AVG(E) "Pawns or Players", AVG(F) "Mission", AVG(G) "Health of Codebase", AVG(H) "Support", AVG(I) "Easy to Release", AVG(J) "Teamwork", AVG(K) "Suitable Process", AVG(L) "Fun", AVG(M) "Delivering Value", AVG(O) "Experimentation"';
       d3.gviz(key, sheet, query, function(data) {
         // Functions that deal and chart data
         console.log("HOLA");
