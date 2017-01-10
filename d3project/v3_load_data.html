@@ -1,5 +1,8 @@
+<!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <title>D3 with data from a Google SpreadSheet</title>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
   <!--
@@ -59,7 +62,6 @@
     // Caution: In the Google API Console you can define the URLs and ports
     //    where the authentication may be valid
     function authorize() {
-     //var clientId = '1081249692953-54e31ls3ontmhjtnh53crkg61upto185.apps.googleusercontent.com';
      var clientId = '44663506136-mb5es57rmidmfsdhkd4rtu70dobmqrqu.apps.googleusercontent.com';
      var scopes = 'https://spreadsheets.google.com/feeds';
      return new Promise(function(resolve) {
@@ -87,22 +89,83 @@
 
     // Loads data from the Google Spreadsheet identified by the key
     function loadData() {
-      var key = '1CLUkLM228B65Mz2N7Zkz94Zek7JiABDkJ9qShYnc-50';
-      var sheet = 'Health Check';
-      var query = 'SELECT year(A), month(A), N, AVG(C), AVG(D), AVG(E), AVG(F), AVG(G), AVG(H), AVG(I), AVG(J), AVG(K), AVG(L), AVG(M), AVG(O) ' +
-                  'GROUP BY year(A), month(A), N ' +
-                  'ORDER BY N, year(A) DESC, month(A) DESC LABEL year(A) "Year", month(A) "Month", N "Team", AVG(C) "Learning", AVG(D) "Speed", AVG(E) "Pawns or Players", AVG(F) "Mission", AVG(G) "Health of Codebase", AVG(H) "Support", AVG(I) "Easy to Release", AVG(J) "Teamwork", AVG(K) "Suitable Process", AVG(L) "Fun", AVG(M) "Delivering Value", AVG(O) "Experimentation"';
+      var key = '1AphYK-JYCk68PEQJgsqAY0dpwdIfRtKak2gCdR4u87M';
+      var sheet = 'Some Data';
+      var query = 'SELECT B OFFSET 1';
       d3.gviz(key, sheet, query, function(data) {
-        // Functions that deal and chart data
-        console.log("HOLA");
-        healthcheckScatterplot(data);
-        healthcheckTrendLines(data);
+        // Call the functions that deal and chart data
+        drawBarChart(data);
+        hideLoading();
       });
     }
     function init() {
       authorize().then(loadData);
     }
+
+    // Function that actually plots the data
+    function drawBarChart(dataset) {
+      //Width and height
+			var w = 600;
+			var h = 250;
+
+			var xScale = d3.scale.ordinal()
+							.domain(d3.range(dataset.length))
+							.rangeRoundBands([0, w], 0.05);
+
+			var yScale = d3.scale.linear()
+							.domain([0, d3.max(dataset, function(d) { return d.Values; })])
+							.range([0, h]);
+
+			//Create SVG element
+			var svg = d3.select("body")
+						.append("svg")
+						.attr("width", w)
+						.attr("height", h);
+
+			//Create bars
+			svg.selectAll("rect")
+			   .data(dataset)
+			   .enter()
+			   .append("rect")
+			   .attr("x", function(d, i) {
+			   		return xScale(i);
+			   })
+			   .attr("y", function(d) {
+			   		return h - yScale(d.Values);
+			   })
+			   .attr("width", xScale.rangeBand())
+			   .attr("height", function(d) {
+			   		return yScale(d.Values);
+			   })
+			   .attr("fill", function(d) {
+					return "rgb(0, 0, " + (d.Values * 10) + ")";
+        });
+
+			//Create labels
+			svg.selectAll("text")
+			   .data(dataset)
+			   .enter()
+			   .append("text")
+			   .text(function(d) {
+			   		return d.Values;
+			   })
+			   .attr("text-anchor", "middle")
+			   .attr("x", function(d, i) {
+			   		return xScale(i) + xScale.rangeBand() / 2;
+			   })
+			   .attr("y", function(d) {
+			   		return h - yScale(d.Values) + 14;
+			   })
+			   .attr("font-family", "sans-serif")
+			   .attr("font-size", "11px")
+			   .attr("fill", "white");
+    }
+
+    function hideLoading() {
+        document.getElementById('legend').style.visibility= 'hidden';
+    }
   </script>
+
   <!-- Button and code to allow Authorization -->
   <div id="container">
    <button id="authorize-button" style="visibility: hidden">Authorize</button>
@@ -112,5 +175,11 @@
    </div>
    <script src="https://apis.google.com/js/auth.js?onload=init"></script>
   </div>
+
+  <!-- Page Content -->
+  <div>
+    The data displayed comes from a <a href="https://docs.google.com/spreadsheets/d/1AphYK-JYCk68PEQJgsqAY0dpwdIfRtKak2gCdR4u87M/edit#gid=1343886933">Google Spreadsheet</a>, if valid credentials are supplied.
+  </div>
+
 </body>
 </html>
