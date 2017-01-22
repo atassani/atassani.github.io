@@ -71,6 +71,12 @@ hackAMole/)
 - [D3 from v3 to v4](https://keithpblog.wordpress.com/2016/07/31/upgrading-d3-from-v3-to-v4/)
 - [D3 from v3 to v4](https://github.com/d3/d3/blob/master/CHANGES.md)
 
+# OAuth
+- [](https://developers.google.com/api-client-library/javascript/samples/samples#authorizing-and-making-authorized-requests)
+- [](https://developers.google.com/identity/protocols/OAuth2)
+- [](https://developers.google.com/api-client-library/javascript/features/corsata
+- lite-erver
+
 SVG Planner
 http://chrismdp.com/2006/10/svg-planner/
 
