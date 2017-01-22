@@ -50,6 +50,8 @@ hackAMole/)
   - [Bar and Transition](d3project/v3_bar_and_transition.html)
   - [Sort bars](d3project/v3_sort_bars.html)
   - [Load data](d3project/v3_load_data.html)
+  - [Book: simple](d3project/v4_simple.html)
+  - [From CSV and JSON local](d3project/chapter2/v4_load.html)
 
 # D3 links
 - [D3 Home](https://d3js.org/)

@@ -6,3 +6,8 @@ Gemfile
 Gemfile.lock
 npm-debug.log
 node_modules
+*.log
+bower_components
+coverage
+test-results.xml
+*.orig

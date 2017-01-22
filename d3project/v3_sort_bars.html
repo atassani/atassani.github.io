@@ -23,11 +23,11 @@
 			var dataset = [ 5, 10, 13, 19, 21, 25, 22, 18, 15, 13,
 							11, 12, 15, 20, 18, 17, 16, 18, 23, 25 ];
 
-			var xScale = d3.scale.ordinal()
+			var xScale = d3.scaleOrdinal()
 							.domain(d3.range(dataset.length))
 							.rangeRoundBands([0, w], 0.05);
 
-			var yScale = d3.scale.linear()
+			var yScale = d3.scaleLinear()
 							.domain([0, d3.max(dataset)])
 							.range([0, h]);
 

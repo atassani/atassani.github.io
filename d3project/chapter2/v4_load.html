@@ -1,0 +1,11 @@
+<!doctype html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.4.1/d3.js" type="text/JavaScript">
+</script>
+<body>
+  <script>
+    d3.csv("cities.csv",data => {console.table(data)});
+    d3.json("tweets.json",(error, data) => {console.log(error, data)});
+  </script>
+</body>
+</html>
