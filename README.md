@@ -51,7 +51,10 @@ hackAMole/)
   - [Sort bars](d3project/v3_sort_bars.html)
   - [Load data](d3project/v3_load_data.html)
   - [Book: simple](d3project/v4_simple.html)
+- D3 Book v4 examples
   - [From CSV and JSON local](d3project/chapter2/v4_load.html)
+  - [Scale and Clamp](d3project/chapter2/bar_scale_and_clamp.html)
+  - [Multiple channels](d3project/chapter2/multiple_channels.html)
 
 # D3 links
 - [D3 Home](https://d3js.org/)
