@@ -2,7 +2,9 @@
 <html>
 <head>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.8/d3.min.js" type="text/JavaScript"></script>
-</head>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script></head>
+  <script>hljs.initHighlightingOnLoad();</script>
 <body>
   <svg style="width:500px;height:500px;">
   </svg>
@@ -36,6 +38,13 @@ d3.select("svg")
   .style("stroke", "black")
   .style("stroke-width", "1px");
 }
-
 </script>
+<pre><code class="JavaScript">  var timeRamp = d3.scaleTime().domain(startEnd).range([20,480]);
+  var yScale = d3.scaleLinear().domain([0,maxImpact]).range([0,460]);
+  var radiusScale = d3.scaleLinear()
+                      .domain([0,maxImpact]).range([1,20]);
+  var colorScale = d3.scaleLinear()
+                     .domain([0,maxImpact]).range(["white","#75739F"])
+</code></pre>
+
 </body>

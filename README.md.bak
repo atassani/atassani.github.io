@@ -1,10 +1,49 @@
+## Welcome to GitHub Pages
+
+You can use the [editor on GitHub](https://github.com/atassani/atassani.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+
+Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+
+### Markdown
+
+Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+
+```markdown
+Syntax highlighted code block
+
+# Header 1
+## Header 2
+### Header 3
+
+- Bulleted
+- List
+
+1. Numbered
+2. List
+
+**Bold** and _Italic_ and `Code` text
+
+[Link](url) and ![Image](src)
+```
+
+For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+
+### Jekyll Themes
+
+Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/atassani/atassani.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+
+### Support or Contact
+
+Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
 # My links
-- JavaScript30
-  - [Local Storage](javascript30/15-LocalStorage/)
-  - [Speech Detection](javascript30/20-SpeechDetection/)
-  - [Speech Synthesis](javascript30/23-SpeechSynthesis/)
-  - [Countdown Timer](javascript30/29-CountdownTimer/)
-  - [Whack a Mole](javascript30/30-whackAMole/)
+- [Test](test.html)
+- [Local Storage](javascript30/15-LocalStorage/)
+- [Speech Detection](javascript30/20-SpeechDetection/)
+- [Speech Synthesis](javascript30/23-SpeechSynthesis/)
+- [Countdown Timer](javascript30/29-CountdownTimer/)
+- [Whack a Mole](javascript30/30-w
+hackAMole/)
 - D3 projects
   - [Basics](d3/index.html)
   - [Experiments](d3project/)
@@ -16,7 +55,6 @@
   - [From CSV and JSON local](d3project/chapter2/v4_load.html)
   - [Scale and Clamp](d3project/chapter2/bar_scale_and_clamp.html)
   - [Multiple channels](d3project/chapter2/multiple_channels.html)
-  - [Soccer](d3project/chapter3/soccer.html)
 
 # D3 links
 - [D3 Home](https://d3js.org/)
@@ -32,13 +70,15 @@
 - [D3 from cdnjs](https://cdnjs.com/libraries/d3)
 - [D3 from v3 to v4](https://keithpblog.wordpress.com/2016/07/31/upgrading-d3-from-v3-to-v4/)
 - [D3 from v3 to v4](https://github.com/d3/d3/blob/master/CHANGES.md)
-- [SVG Planner](http://chrismdp.com/2006/10/svg-planner/)
 
 # OAuth
-- [Google Samples](https://developers.google.com/api-client-library/javascript/samples/samples#authorizing-and-making-authorized-requests)
-- [Google](https://developers.google.com/identity/protocols/OAuth2)
-- [Google api-client-library](https://developers.google.com/api-client-library/javascript/features/corsata)
-- lite-server
+- [](https://developers.google.com/api-client-library/javascript/samples/samples#authorizing-and-making-authorized-requests)
+- [](https://developers.google.com/identity/protocols/OAuth2)
+- [](https://developers.google.com/api-client-library/javascript/features/corsata
+- lite-erver
+
+SVG Planner
+http://chrismdp.com/2006/10/svg-planner/
 
 # D3 Galleries
 - [Gallery](https://github.com/d3/d3/wiki/Gallery)
