@@ -66,7 +66,7 @@ function overallTeamViz(incomingData) {
     .append("text")
     .style("text-anchor", "middle")
     .attr("y", 30)
-	.text(d => d.team)
+	.text(d => d.team);
 
   var dataKeys = Object.keys(incomingData[0])
                        .filter(d =>d !== "team" &&d !== "region");
@@ -77,27 +77,52 @@ function overallTeamViz(incomingData) {
                         .on("click", buttonClick)
                         .html(d => d);
   function buttonClick(datapoint) {
-    console.log(datapoint);
     var maxValue = d3.max(incomingData, d =>parseFloat(d[datapoint]))
     var radiusScale = d3.scaleLinear()
                         .domain([ 0, maxValue ]).range([ 2, 20 ]);
+
+    var ybRamp = d3.scaleLinear()
+                        .domain([0,maxValue]).range(["blue", "yellow"]);
     d3.selectAll("g.overallG").select("circle")
-                .transition().duration(1000)
-                .attr("r", d => radiusScale(d[datapoint]))
+                        .transition().duration(1000)
+                        .attr("r", d => radiusScale(d[datapoint]))
+                        .style("fill", d => ybRamp(d[datapoint]))
   };
 
   teamG.on("mouseover", highlightRegion);
   function highlightRegion(d) {
+    //d3.selectAll("g.overallG").select("circle")
+    //  .attr("class", p =>p.region === d.region ? "active" : "inactive")
+    d3.select(this).select("text").classed("active", true).attr("y", 10);
+    var teamColor = d3.rgb("#75739F");
     d3.selectAll("g.overallG").select("circle")
-      .attr("class", p =>p.region === d.region ? "active" : "inactive")
+      // Choose the color by "inline", using darker and brighter in d3.rgb
+      .style("fill", p =>
+        p.region === d.region ? teamColor.darker(.75) : teamColor.brighter(.5));
+
+      // Choose the color using CSS
+      // .each(
+      //   function(p) {
+      //     p.region == d.region ?
+      //       d3.select(this).classed("active",true) :
+      //       d3.select(this).classed("inactive",true);
+      //   });
+
+    // Two options to bring the text to the front
+    //this.parentElement.appendChild(this);
+    d3.select(this).raise();
   };
 
   teamG.on("mouseout", function() {
-    d3.selectAll("g.overallG")
-      .select("circle").classed("inactive", false).classed("active", false)
+    //d3.selectAll("g.overallG")
+    //  .select("circle").classed("inactive", false).classed("active", false)
+    d3.selectAll("g.overallG").select("circle").attr("class", "");
+    d3.selectAll("g.overallG").select("text").classed("active", false).attr("y", 30);
   });
-}
 
+  teamG.select("text").style("pointer-events","none"); // Events only on circles.
+
+}
 
   </script>
 </body>
