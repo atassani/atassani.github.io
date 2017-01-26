@@ -66,6 +66,7 @@ function overallTeamViz(incomingData) {
     .append("text")
     .style("text-anchor", "middle")
     .attr("y", 30)
+    .attr("font-family", "sans-serif")
 	.text(d => d.team);
 
   var dataKeys = Object.keys(incomingData[0])
@@ -81,12 +82,40 @@ function overallTeamViz(incomingData) {
     var radiusScale = d3.scaleLinear()
                         .domain([ 0, maxValue ]).range([ 2, 20 ]);
 
+    /*
     var ybRamp = d3.scaleLinear()
+                        // Without interpolate colors are choosen only numerically
+                        .interpolate(d3.interpolateHsl) // Hue, Saturation, Lightess
+                        // .interpolate(d3.interpolateHcl) // Hue, Chroma, Ligheness
+                        // .interpolate(d3.interpolateLab) // Lightness, A-B
                         .domain([0,maxValue]).range(["blue", "yellow"]);
+
+
     d3.selectAll("g.overallG").select("circle")
                         .transition().duration(1000)
                         .attr("r", d => radiusScale(d[datapoint]))
                         .style("fill", d => ybRamp(d[datapoint]))
+    */
+
+    /*
+    // Four collections of discrete color categories:
+    // d3.schemeCategory10, d3.schemeCategory20, d3.schemeCategory20b and d3.schemeCategory20c
+    var tenColorScale = d3.scaleOrdinal()
+        .domain(["UEFA", "CONMEBOL", "CAF", "AFC"])
+        .range(d3.schemeCategory10)
+        .unknown("#c4b9ac");
+
+    d3.selectAll("g.overallG").select("circle").transition().duration(1000)
+        .style("fill", p => tenColorScale(p.region))
+        .attr("r", p => radiusScale(p[datapoint ]));
+    */
+
+
+    var colorQuantize = d3.scaleQuantize()
+        .domain([0,maxValue]).range(colorbrewer.Reds[3]);
+    d3.selectAll("g.overallG").select("circle").transition().duration(1000)
+        .style("fill", d =>colorQuantize(d[datapoint]))
+        .attr("r", d =>radiusScale(d[datapoint]))
   };
 
   teamG.on("mouseover", highlightRegion);
@@ -121,6 +150,11 @@ function overallTeamViz(incomingData) {
   });
 
   teamG.select("text").style("pointer-events","none"); // Events only on circles.
+
+  d3.selectAll("g.overallG").insert("image", "text")
+    .attr("xlink:href", d => "images/" + d.team + ".png")
+    .attr("width", "45px").attr("height", "20px").attr("x", "-22")
+    .attr("y", "-10");
 
 }
 
