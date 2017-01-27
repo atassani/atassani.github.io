@@ -1,3 +1,7 @@
+---
+title: My page
+permalink: map/
+---
 # Creating a map
 
 Following Mike Bostock's article Command-Line Cartography, [Part 1](https://medium.com/@mbostock/command-line-cartography-part-1-897aa8f8ca2c#.ywe1d9jwj), [Part 2](https://medium.com/@mbostock/command-line-cartography-part-2-c3a82c5c0f3#.3fpxtkjgx)

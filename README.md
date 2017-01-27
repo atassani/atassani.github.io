@@ -17,7 +17,7 @@
   - [Scale and Clamp](d3project/chapter2/bar_scale_and_clamp.html)
   - [Multiple channels](d3project/chapter2/multiple_channels.html)
   - [Soccer](d3project/chapter3/soccer.html)
-  - [Map](d3project/map)
+  - [Map](/map)
 
 # D3 links
 - [D3 Home](https://d3js.org/)
