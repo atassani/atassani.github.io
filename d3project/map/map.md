@@ -117,4 +117,4 @@ geo2svg -n --stroke none -p 1 -w 960 -h 960 \
     > ca-albers-color.svg  
 ```
 
-This is the final result of the [map without colors](d3project/map/ca-albers.svg) and the [map with data](d3project/map/ca-albers-color.svg).
+This is the final result of the [map without colors](/d3project/map/ca-albers.svg) and the [map with data](/d3project/map/ca-albers-color.svg).
