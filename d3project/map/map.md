@@ -20,6 +20,7 @@ npm install -g shapefile
 ```
 
 And convert `.shp` to GeoJSON:
+
 ```bash
 shp2json cb_2014_06_tract_500k.shp -o ca.json
 ```
@@ -34,11 +35,13 @@ geoproject 'd3.geoConicEqualArea().parallels([34, 40.5]).rotate([120, 0]).fitSiz
 ```
 
 To preview the projected geometry in SVG:
+
 ```bash
 geo2svg -w 960 -h 960 < ca-albers.json > ca-albers.svg
 ```
 
 To manipulate the json and convert to newline-delimited JSON (NDJSON):
+
 ```bash
 npm install -g ndjson-cli
 
@@ -52,6 +55,7 @@ ndjson-split 'd.features' \
 ```
 
 Get population estimates from Census Bureau:
+
 ```bash
 curl 'http://api.census.gov/data/2014/acs5?get=B01003_001E&for=tract:*&in=state:06' -o cb_2014_06_tract_B01003.json
 ```
@@ -66,6 +70,7 @@ ndjson-cat cb_2014_06_tract_B01003.json \
 ```
 
 And join population data to geometry:
+
 ```bash
 ndjson-join 'd.id' \
   ca-albers-id.ndjson \
@@ -74,6 +79,7 @@ ndjson-join 'd.id' \
 ```
 
 Compute popoulation density and remove additional properties:
+
 ```bash
 ndjson-map 'd[0].properties = {density: Math.floor(d[1].B01003 / d[0].properties.ALAND * 2589975.2356)}, d[0]' \
   < ca-albers-join.ndjson \
@@ -81,6 +87,7 @@ ndjson-map 'd[0].properties = {density: Math.floor(d[1].B01003 / d[0].properties
 ```
 
 Convert back to GeoJSON:
+
 ```bash
 ndjson-reduce \
   < ca-albers-density.ndjson \
@@ -88,6 +95,7 @@ ndjson-reduce \
   > ca-albers-density.json
 ```
 or
+
 ```bash
 ndjson-reduce 'p.features.push(d), p' '{type: "FeatureCollection", features: []}' \
   < ca-albers-density.ndjson \
@@ -95,6 +103,7 @@ ndjson-reduce 'p.features.push(d), p' '{type: "FeatureCollection", features: []}
 ```
 
 Install D3 and create a choropleth and to SVG.
+
 ```bash
 npm install -g d3
 
