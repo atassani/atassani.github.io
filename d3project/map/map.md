@@ -107,3 +107,5 @@ geo2svg -n --stroke none -p 1 -w 960 -h 960 \
     < ca-albers-color.ndjson \
     > ca-albers-color.svg  
 ```
+
+This is the final result of the [map without colors](ca-albers.svg) and the [map with data](ca-albers-color.svg).
