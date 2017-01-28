@@ -16,7 +16,8 @@
   - [From CSV and JSON local](d3project/chapter2/v4_load.html)
   - [Scale and Clamp](d3project/chapter2/bar_scale_and_clamp.html)
   - [Multiple channels](d3project/chapter2/multiple_channels.html)
-  - [Soccer](d3project/chapter3/soccer.html)
+  - [Soccer Basic](d3project/chapter3/soccer_basic.html)
+  - [Soccer with Flags](d3project/chapter3/soccer_flags.html)
   - [Map](/map)
 
 # D3 links
