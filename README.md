@@ -23,6 +23,7 @@
 # D3 links
 - [D3 Home](https://d3js.org/)
 - [D3 on GitHub](https://github.com/d3/d3/wiki)
+- [Map of Catalonia](http://teslabs.com/articles/topojson-catalonia/)
 - [Interactive Data Visualization for the Web - Scott Murray's book](http://alignedleft.com/work/d3-book)
 - [D3 for mere mortals](http://www.recursion.org/d3-for-mere-mortals/)
 - [Getting to “Hello world” with d3 - Jerome Cukier](http://www.jeromecukier.net/blog/2012/09/04/getting-to-hello-world-with-d3/)
@@ -30,7 +31,7 @@
 - [A visual explanation of the Enter, Update and Exit Selections in D3js](http://javascript.tutorialhorizon.com/2014/11/20/a-visual-explanation-of-the-enter-update-and-exit-selections-in-d3js/)
 - [Event Compatibility Table between D3 and DOM events](http://www.quirksmode.org/dom/events/)
 - [Mike Bockstock. Object Constancy](https://bost.ocks.org/mike/constancy/)
-- [SCott Murray. Interactive Data Visualization for the Web](http://alignedleft.com/work/d3-book)
+- [Scott Murray. Interactive Data Visualization for the Web](http://alignedleft.com/work/d3-book)
 - [D3 from cdnjs](https://cdnjs.com/libraries/d3)
 - [D3 from v3 to v4](https://keithpblog.wordpress.com/2016/07/31/upgrading-d3-from-v3-to-v4/)
 - [D3 from v3 to v4](https://github.com/d3/d3/blob/master/CHANGES.md)

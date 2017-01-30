@@ -12,3 +12,4 @@ coverage
 test-results.xml
 *.orig
 data/
+map-cat

@@ -117,4 +117,79 @@ geo2svg -n --stroke none -p 1 -w 960 -h 960 \
     > ca-albers-color.svg  
 ```
 
+---
+
+To reduce the size of the file we will install TopoJSON CLI:
+
+```bash
+npm install -g topojson
+```
+
+To convert to TopoJSON and simplify:
+
+```bash
+geo2topo -n \
+  tracts=ca-albers-density.ndjson \
+  > ca-tracts-topo.json
+
+toposimplify -p 1 -f \
+    < ca-tracts-topo.json \
+    > ca-simple-topo.json  
+
+topoquantize 1e5 \
+      < ca-simple-topo.json \
+      > ca-quantized-topo.json    
+```
+
+We can use `topomerge` to get county geometry:
+
+```bash
+topomerge -k 'd.id.slice(0, 3)' counties=tracts \
+  < ca-quantized-topo.json \
+  > ca-merge-topo.json
+```
+
+```bash
+topomerge --mesh -f 'a !== b' counties=counties \
+  < ca-merge-topo.json \
+  > ca-topo.json
+```
+
+```bash
+topo2geo tracts=- \
+  < ca-topo.json \
+  | ndjson-map -r d3 'z = d3.scaleSequential(d3.interpolateViridis).domain([0, 4000]), d.features.forEach(f => f.properties.fill = z(f.properties.density)), d' \
+  | ndjson-split 'd.features' \
+  | geo2svg -n --stroke none -p 1 -w 960 -h 960 \
+  > ca-tracts-color.svg
+
+topo2geo tracts=- \
+    < ca-topo.json \
+    | ndjson-map -r d3 'z = d3.scaleSequential(d3.interpolateViridis).domain([0, 100]), d.features.forEach(f => f.properties.fill = z(Math.sqrt(f.properties.density))), d' \
+    | ndjson-split 'd.features' \
+    | geo2svg -n --stroke none -p 1 -w 960 -h 960 \
+    > ca-tracts-sqrt.svg  
+```
+
+Install the discrete color schemes from Cynthia A. Brewer.
+
+```bash
+npm install -g d3-scale-chromatic
+```
+
+Add borders:
+
+```bash
+(topo2geo tracts=- \
+    < ca-topo.json \
+    | ndjson-map -r d3 -r d3=d3-scale-chromatic 'z = d3.scaleThreshold().domain([1, 10, 50, 200, 500, 1000, 2000, 4000]).range(d3.schemeOrRd[9]), d.features.forEach(f => f.properties.fill = z(f.properties.density)), d' \
+    | ndjson-split 'd.features'; \
+topo2geo counties=- \
+    < ca-topo.json \
+    | ndjson-map 'd.properties = {"stroke": "#000", "stroke-opacity": 0.3}, d')\
+  | geo2svg -n --stroke none -p 1 -w 960 -h 960 \
+  > ca.svg
+```
+
+
 This is the final result of the [map without colors](/d3project/map/ca-albers.svg) and the [map with data](/d3project/map/ca-albers-color.svg).
