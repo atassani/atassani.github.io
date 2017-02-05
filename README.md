@@ -18,6 +18,7 @@
   - [Multiple channels](d3project/chapter2/multiple_channels.html)
   - [Soccer Basic](d3project/chapter3/soccer_basic.html)
   - [Soccer with Flags](d3project/chapter3/soccer_flags.html)
+  - [Scatterplot (Chapter 4)](d3project/chapter4/index.html)
   - [Map](/map)
 
 # D3 links

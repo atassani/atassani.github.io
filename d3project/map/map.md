@@ -26,7 +26,7 @@ shp2json cb_2014_06_tract_500k.shp -o ca.json
 ```
 
 We apply a geographic projection to avoid expensive trigonometric operations.
-We apply the projection named 'California Albers', but we could try 'd3-stateplane' or search (spatialreference.org)[http://spatialreference.org]
+We apply the projection named 'California Albers', but we could try 'd3-stateplane' or search [spatialreference.org](http://spatialreference.org)
 
 ```bash
 npm install -g d3-geo-projection
