@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<body>
+<link rel="stylesheet" media="all" href="src/word-count.css">
+
+<script type="application/javascript" src="build/word-counter.js"></script>
+
+<div id="border">
+    <textarea id='text'></textarea>
+</div>
+
+<button id="countButton">Cuenta</button>
+
+<div class="counter">
+<div class="title">Palabras totales:</div><div class="value" id="total"> </div>
+</div>
+
+<div class="counter">
+<div class="title">Palabras que cuentan:</div><div class="value" id="num"> </div>
+</div>
+
+<div id="highlighted"></div>
+
+
+<script type="application/javascript">
+  var theButton = document.querySelector("#countButton");
+  theButton.addEventListener("click", function() {
+    var text = document.getElementById("text").value;
+    var countResult = wordCounter.count(text);
+    document.getElementById("num").innerHTML = countResult.count;
+    document.getElementById("total").innerHTML = countResult.total;
+    document.getElementById("highlighted").innerHTML = countResult.text;
+  });
+</script>
