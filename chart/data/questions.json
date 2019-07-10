@@ -1,0 +1,353 @@
+{
+   "V1": {
+       "question": "(VB01) Visualise work items and their current state",
+       "answer0": "(0) We do not visualise work items.",
+       "answer1": "(1) We use tickets (sticky notes or Jira tickets) to visualise our work.",
+       "answer2": "(2) All our agreed work items are listed on the board."
+   },
+   "V2": {
+       "question": "(VB02) Visualise work types",
+       "answer0": "(0) We do not differentiate work items.",
+       "answer1": "(1) We categorise and visualise our work items into types along whichever dimensions are meaningful to us (ex: story / bug fix; small / medium / large, etc.)",
+       "answer2": "(2) We consistently categorise our work items."
+   },
+   "V3": {
+       "question": "(VB03) Visualise next & done",
+       "answer0": "(0) We do not visualise our backlog or next items ready to be pulled into the system.",
+       "answer1": "(1) Our board has a Commitment Point and a Customer End Point.",
+       "answer2": "(2) We can explain why these two points exist."
+   },
+   "V4": {
+       "question": "(VB04) Visualise current team focus (avatars)",
+       "answer0": "(0) We do not use avatars.",
+       "answer1": "(2) All tickets being actively worked on have at least one avatar."
+   },
+   "V5": {
+       "question": "(VB05) Visualise blocked tickets",
+       "answer0": "(0) We do not visualise blocked tickets.",
+       "answer1": "(1) We have a ‘Blocked’ indicator on our Kanban board, to highlight the tasks which are not actively being worked on.",
+       "answer2": "(2) We systematically use the blocking function in Jira and visually if applicable."
+   },
+   "V6": {
+       "question": "(VB06) Visualise current transition policies (DoD, DoR, etc.)",
+       "answer0": "(0) We do not visualise policies related to transitions.",
+       "answer1": "(1) Our policies regarding transitions are posted on the board and/or as pop-up in Jira.",
+       "answer2": "(2) When our transition policies change, we always make sure their visualisation is updated too."
+   },
+   "V7": {
+       "question": "(VI07) Visualise \"ready to pull\" (\"done\" within the workflow columns)",
+       "answer0": "(0) We do not visualise ready to pull tickets.",
+       "answer1": "(2) We have intermediate columns in every work stage which serve as a buffer, indicating a ticket is done for the current stage."
+   },
+   "V8": {
+       "question": "(VI08) Visualise metrics (lead times, local cycle time, SLA targets, etc.)",
+       "answer0": "(0) We do not visualise metrics (lead times, local cycle time, SLA targets, etc.).",
+       "answer1": "(2) We visualise metrics (lead times, local cycle time, SLA targets, etc.) physically or electronically."
+   },
+   "V9": {
+       "question": "(VI09) Visualise WIP limits",
+       "answer0": "(0) We do not visualise WIP limits for our work stages (columns).",
+       "answer1": "(1) WIP limits (including unlimited) for some or all of our work stages are visualised on our board.",
+       "answer2": "(2) If any column does not have a WIP Limit it's a conscious decision that we can explain"
+   },
+   "V10": {
+       "question": "(VA10) Visualise Inter-work dependencies (hierarchical, parent-child, etc.)",
+       "answer0": "(0) We do not visualise dependencies and hierarchies between our work items.",
+       "answer1": "(1) We visualise some of the dependencies and/or hierarchies on our board.",
+       "answer2": "(2) We visualise all of the dependencies and/or hierarchies between our work items."
+   },
+   "V11": {
+       "question": "(VA11) Visualise Inter-workflow dependencies",
+       "answer0": "(0) We do not visualise dependencies with other Kanban systems.",
+       "answer1": "(1) We use basic visualisation (blockers or any signal directly on the ticket) to indicate dependencies with other workflows.",
+       "answer2": "(2) Our work items which are dependent on other workflows (kanban systems) are shown as such with connected SLAs, ageing information, and other signalling systems that make the connection clear."
+   },
+   "V12": {
+       "question": "(VE12) Visualise risk dimensions (cost-of-delay, technical risk, market risk)",
+       "answer0": "(0) We do not visualise risk dimensions.",
+       "answer1": "(1) We visualise some of the risk dimensions of features to help us prioritise and/or communicate with other groups.",
+       "answer2": "(2) We consistently visualise the risk dimensions of features to help us prioritise and/or communicate with other groups."
+   },
+   "W1": {
+       "question": "(WB01) Explicit WIP limit at SOME states",
+       "answer0": "(0) We have no formal WIP limits.",
+       "answer1": "(1) We have defined WIP limits at some states or are committed to finishing work over starting new.",
+       "answer2": "(2) We have explicit WIP limits at some states and are following them."
+   },
+   "W2": {
+       "question": "(WI02) Explicit WIP limits at ALL states",
+       "answer0": "(0) Some or none of our states have WIP limits.",
+       "answer1": "(1) We have WIP limits at all states or we pull work when we feel the WIP is OK.",
+       "answer2": "(2) We are consistently following the WIP limits at all states."
+   },
+   "W3": {
+       "question": "(WA03) Reflection when adjusting WIP",
+       "answer0": "(0) We do not reflect around WIP limits.",
+       "answer1": "(1) We have some conversations around our WIP limits: when breaking them, changing the team, being above/below, etc.",
+       "answer2": "(2) We adjust WIP limits looking at all the flow and reflecting on how changing the WIP will affect surrounding states."
+   },
+   "W4": {
+       "question": "(WE04) WIP limits and other teams",
+       "answer0": "(0) We do not take other teams into account when discussing our WIP limits.",
+       "answer1": "(1) We understand other teams' capabilities and have started taking them into account.",
+       "answer2": "(2) Our work is planned with capabilities of interconnected teams in mind, not only at team level. SLAs of other teams are taken into consideration."
+   },
+   "F1": {
+       "question": "(FB01) Daily planning meetings",
+       "answer0": "(0) We do not hold daily planning meetings, or if we do they are only focused on reporting.",
+       "answer1": "(1) We have daily planning meetings scheduled and focused on the content of the board.",
+       "answer2": "(2) Our daily planning meetings are highly effective and focused on flow."
+   },
+   "F2": {
+       "question": "(FB02) \"Blockers\" escalation",
+       "answer0": "(0) We do not escalate blockers.",
+       "answer1": "(1) We hand over to the team with power to resolve the blocks for the tasks marked as blocked.",
+       "answer2": "(2) We follow up blockers based on the expectations created by the other team (other team's SLA)."
+   },
+   "F3": {
+       "question": "(FI03) Work re-prioritisation",
+       "answer0": "(0) We do not re-prioritisise work.",
+       "answer1": "(1) We have a fixed cadence (more often than monthly) for prioritisation in place.",
+       "answer2": "(2) We do event-driven prioritisation (based on learnings from things we have released or new input from ideas)."
+   },
+   "F4": {
+       "question": "(FI04) Cumulative flow diagrams usage",
+       "answer0": "(0) We do not use CFD.",
+       "answer1": "(1) We have conversations around flow using the CFD at least once a month.",
+       "answer2": "(2) We make decisions about the flow using the CFD at least once a month."
+   },
+   "F5": {
+       "question": "(FI05) Control charts usage",
+       "answer0": "(0) We do not use control charts.",
+       "answer1": "(1) We use control charts at least once a month to discuss outliers and SLAs.",
+       "answer2": "(2) We use control charts for forecasting."
+   },
+   "F6": {
+       "question": "(FA06) Flexible staff allocation (swarming)",
+       "answer0": "(0) We do not collaborate around work items.",
+       "answer1": "(1) We sometimes collaborate on work items, but this needs to be planned for.",
+       "answer2": "(2) We are pro-active around collaboration, working more than one individual per work item and/or working on areas that are not our main skill."
+   },
+   "F7": {
+       "question": "(FA07) Cadence",
+       "answer0": "(0) We have no cadences established, having ad-hoc meetings when required.",
+       "answer1": "(1) We are performing regular productive meetings around planning AND retrospectives.",
+       "answer2": "(2) We regularly discuss about frequency of cadences, and suggest improvements around them."
+   },
+   "F8": {
+       "question": "(FA08) Flow metrics",
+       "answer0": "(0) We do not track any lean metric.",
+       "answer1": "(1) We are aware of the lean metrics without being told by Agile coaches.",
+       "answer2": "(2) We are taking actions based on the lean metrics we are tracking."
+   },
+   "F9": {
+       "question": "(FA09) SLA expectations and forecasts (lead time targets)",
+       "answer0": "(0) We do not have SLA's.",
+       "answer1": "(1) We are committed to an SLA(s) and make decisions on flow based on it. The number(s) is used for prioritising work and splitting work items.",
+       "answer2": "(2) We are able to do forecasts based on SLA(s) and lead time distributions."
+   },
+   "F10": {
+       "question": "(FE10) Capacity allocation",
+       "answer0": "(0) We do not take into account classes of service to define capacity allocation.",
+       "answer1": "(1) Our SLA's and capacities are determined for each class of service. We do allocation per class of service which is driven by SLA's.",
+       "answer2": "(2) We have established dynamic capacity allocation policies based on classes of service."
+   },
+   "P1": {
+       "question": "(PB01) Definition of work types and work items",
+       "answer0": "(0) We do not have definition of different work types.",
+       "answer1": "(1) We have definitions of different work types and are using them.",
+       "answer2": "(2) Everybody understands the work types and we review them when needed."
+   },
+   "P2": {
+       "question": "(PB02) Pulling of work",
+       "answer0": "(0) We do not have a pull system (work is assigned to us by someone else).",
+       "answer1": "(1) We have an unprioritised queue. We use a pull system without explicit prioritisation policies.",
+       "answer2": "(2) We have rules making clear which work item should be the next in the process based on queue time, work type, urgency."
+   },
+   "P3": {
+       "question": "(PB03) \"Next\" and \"Done\" queues management",
+       "answer0": "(0) We have no explicit Next or Done management policy.",
+       "answer1": "(1) We have explicit rules making clear who can decide the prioritisation of incoming tasks and the acceptance of finished tasks.",
+       "answer2": "(2) Our Next and Done management policy is followed and up to date on a regular basis."
+   },
+   "P4": {
+       "question": "(PB04) Transition criteria for all steps",
+       "answer0": "(0) We do not have a definition of transition criteria for all steps.",
+       "answer1": "(1) We have definitions of transition criteria for all steps.",
+       "answer2": "(2) We do have a definition of transition criteria in the whole value stream, we follow it and review it on a regular basis."
+   },
+   "P5": {
+       "question": "(PI05) Work break down",
+       "answer0": "(0) We do not consider size of work items.",
+       "answer1": "(1) We have a policy regarding the maximum size for individual work items.",
+       "answer2": "(2) We review our policy related to size of work items on a regular basis."
+   },
+   "P6": {
+       "question": "(PI06) Work selection and preparation",
+       "answer0": "(0) We do not have explicit rules defining how we select and prepare work before the commitment point.",
+       "answer1": "(1) We have an explicit policy defining how we select and prepare work before the commitment point.",
+       "answer2": "(2) We review our policy for work selection and preparation on a regular basis."
+   },
+   "P7": {
+       "question": "(PA07) Knowledge spreading/sharing strategy",
+       "answer0": "(0) We do not have a policy for spreading and sharing knowledge.",
+       "answer1": "(1) We created channels for sharing our knowledge and experience. This way the whole organization will learn faster.",
+       "answer2": "(2) We review our policy for spreading and sharing knowledge on a regular basis."
+   },
+   "P8": {
+       "question": "(PE08) Classes of service",
+       "answer0": "(0) We do not have classes of service defined.",
+       "answer1": "(1) We have defined different classes of service and have policies to accept work for a certain class.",
+       "answer2": "(2) We follow our class-of service policy as a rule. If the rule is broken, we know why and we review the policy accordingly."
+   },
+   "P9": {
+       "question": "(PE09) Capacity allocation at class of service level",
+       "answer0": "(0) We have not defined capacity allocation per class of service.",
+       "answer1": "(1) We have determined capacities for all our classes of service. Capacity is the percentage of tickets of a certain class of service in process at any time.",
+       "answer2": "(2) We review our capacity allocation on a regular basis and adjust it according to demand."
+   },
+   "L1": {
+       "question": "(LB01) Effective daily team meetings",
+       "answer0": "(0) We have no daily meetings, or if we do they are ineffective.",
+       "answer1": "(1) We start every day with checking the status of the team.",
+       "answer2": "(2) We are regularly trying to improve our daily meetings."
+   },
+   "L2": {
+       "question": "(LB02) Key stakeholders regular update",
+       "answer0": "(0) We have no proactive regular communication with key stakeholders.",
+       "answer1": "(1) We have proactive regular communication with key stakeholders.",
+       "answer2": "(2) Every key stakeholder has a clear picture about the status of the work, the dependencies and deficiencies."
+   },
+   "L3": {
+       "question": "(LI03) Managers go and see (walk the \"Gemba\")",
+       "answer0": "(0) Managers are not visiting us to help. Managers are Product Directors, Dev Managers or whoever are the closest managers to the team.",
+       "answer1": "(1) Managers come to visit us and check our work habits, problems, blocks and focus on how they could help, or empower us to have control over our results.",
+       "answer2": "(2) Managers visit us regularly, not only ad-hoc. They benefit from those interactions to make better decisions. They mentor or coach the team when needed."
+   },
+   "L4": {
+       "question": "(LA04) Discussions between upstream and downstream",
+       "answer0": "(0) We rarely have discussions between upstream and downstream.",
+       "answer1": "(1) We hold regular (scheduled) discussions between upstream and downstream.",
+       "answer2": "(2) We hold just-in-time discussions between upstream and downstream, when needed."
+   },
+   "L5": {
+       "question": "(LE05) Performance figures sharing and discussing",
+       "answer0": "(0) We don't have discussions about performance in the team.",
+       "answer1": "(1) We discuss about our performance figures (financial or other indicators).",
+       "answer2": "(2) We discuss about performance as soon as new valuable information is available."
+   },
+   "I1": {
+       "question": "(IB01) Criteria for success awareness",
+       "answer0": "(0) We do not know our criteria for improvement success.",
+       "answer1": "(1) We have explicit improvement objectives and results that we aim to achieve.",
+       "answer2": "(2) We review and update our criteria for success as soon as any relevant event happens."
+   },
+   "I2": {
+       "question": "(IB02) Regular retrospectives/kaizen events",
+       "answer0": "(0) We do not hold regular improvement meetings.",
+       "answer1": "(1) We are having regular improvement events with actionable outcomes.",
+       "answer2": "(2) We are having improvement events with actionable outcomes whenever we (not the agile coaches) see fit, either through regular retrospectives or Just-In-Time."
+   },
+   "I3": {
+       "question": "(II03) Focus on a process improvement challenge and current condition awareness",
+       "answer0": "(0) We are not puting any particular focus on process improvement.",
+       "answer1": "(1) We are focused on a process improvement, and we are aware of our current condition.",
+       "answer2": "(2) We are driving process improvement initiatives towards our desired target condition using metrics"
+   },
+   "I4": {
+       "question": "(IA04) Validation criteria (test) for reaching our current target condition (the big step, not intermediate obstacles)",
+       "answer0": "(0) We do not have a clear validation criteria for reaching our target condition.",
+       "answer1": "(1) We have clear target figures for our metrics so that we know when we reached our target condition.",
+       "answer2": "(2) We consistently define validation criteria for every target condition."
+   },
+   "I5": {
+       "question": "(IE05) Awareness about obstacles preventing from reaching the target condition",
+       "answer0": "(0) We do not clearly understand what are the current obstacles preventing us from reaching our target condition.",
+       "answer1": "(1) Through continuous improvement and retrospective events we have a clear sense of what obstacles are preventing improvement from current state.",
+       "answer2": "(2) We assess the obstacles that we have identified."
+   },
+   "I6": {
+       "question": "(IE06) Awareness about obstacle currently addressed",
+       "answer0": "(0) We do not clearly know which obstacle is currently being addressed.",
+       "answer1": "(1) We are all aware in the team of the obstacle that we are currently working on.",
+       "answer2": "(2) We agreed and drive in the team the obstacle currently being addressed."
+   },
+   "I7": {
+       "question": "(IE07) Awareness about the next step in resolving the current obstacle",
+       "answer0": "(0) We do not use a structured approach (such as PDCA) to address the obstacles.",
+       "answer1": "(1) We are all aware in the team of the next step to resolve the current obstacle.",
+       "answer2": "(2) We agreed and drive in the team the next step to resolve the current obstacle."
+   },
+   "E1": {
+       "question": "(EB01) Team members are seeing and understanding the Big Picture",
+       "answer0": "(0) We do not collaborate with other teams.",
+       "answer1": "(1) We sometimes collaborate with other teams, having a view of the big picture.",
+       "answer2": "(2) We perform our daily tasks with the overall goal in mind, with the aim of always improving the process to achieve better performance and collaboration."
+   },
+   "E2": {
+       "question": "(EB02) Good \"team spirit\"",
+       "answer0": "(0) Some of us act as individuals and prefer to work on their own. We can see signs of behaviours related to lack of trust, disrespect or fear of conflict.",
+       "answer1": "(1) We all desire to work as a team.",
+       "answer2": "(2) When the team spirit is not good, we can handle it and recover by ourselves."
+   },
+   "E3": {
+       "question": "(EB03) Team focus is to remove blockers in work items",
+       "answer0": "(0) We are not paying attention to blockers, or put them into a queue and rely on the process.",
+       "answer1": "(1) We focus on removing blockers. The responsibility of the blocker is clear.",
+       "answer2": "(2) We collaborate with other teams and use all available resources to remove blockers, and use our learnings to improve our process."
+   },
+   "E4": {
+       "question": "(EB04) Team focus is on finishing work rather than starting new work",
+       "answer0": "(0) We start work items as soon as we can.",
+       "answer1": "(1) There are traces of collaboration on finishing ongoing work over starting new one.",
+       "answer2": "(2) When a team member finishes work, instead of pulling work directly the team decides whether that capactiy should be focused on finishing ongoing work over starting something new."
+   },
+   "E5": {
+       "question": "(EI05) Team is working on the \"right\" thing (\"right\" prioritisation)",
+       "answer0": "(0) We don't have prioritisation criteria to define what has to be worked on next or we have them but we see evidence that they are ignored.",
+       "answer1": "(1) Team members are mostly following the prioritisation criteria when they have to start new work.",
+       "answer2": "(2) The prioritisation criteria is followed, challenged and evolved in a structured way."
+   },
+   "E6": {
+       "question": "(EI06) Limiting work to team's capacity (limited stress, optimal lead times)",
+       "answer0": "(0) We don't take into account our throughput, lead time and SLAs to control our stress level.",
+       "answer1": "(1) We DO take into account our throughput, lead time and SLAs to control our stress level.",
+       "answer2": "(2) We have a mechanism to diagnose our stress level, and we observe changes in our circumstances and adapt our policies accordingly, so the stress level is under control."
+   },
+   "E7": {
+       "question": "(EI07) Team has motivation to drive improvements",
+       "answer0": "(0) We are not motivated to look for improvement actions. We see complaining, whining, cynical attitude or complacency.",
+       "answer1": "(1) We ask for guidance when we think about improvements.",
+       "answer2": "(2) We are continuously suggesting and committing to improvements of processes and delivery."
+   },
+   "E8": {
+       "question": "(EI08) Team is aligned with the mission",
+       "answer0": "(0) Not all team members know the mission, or they don't care, or they complain about the mission (or the lack of it).",
+       "answer1": "(1) We question some of the decisions of work to be done, against the mission.",
+       "answer2": "(2) We conciously match all our decisions about the work to be done with our current mission."
+   },
+   "E9": {
+       "question": "(EA09) Local process evolution (visualisation, workflow, policies, WIP limits)",
+       "answer0": "(0) We accept our current process, or change it without a clear hypothesis.",
+       "answer1": "(1) We question our process and make changes with support from the Agile coaches.",
+       "answer2": "(2) We know our processes and practices and understand when to change or bypass them for tactical reasons. The team drives systemic changes, based on hypothesis."
+   },
+   "E10": {
+       "question": "(EA10) Process evolution is model driven",
+       "answer0": "(0) We follow improvement practices as a cargo cult (blindly)",
+       "answer1": "(1) We know why we are following our improvement practices (e.g. Retrospectives, Improvement Kata, ...) with the support of an Agile coach.",
+       "answer2": "(2) We fully understand and know which practices to use and when to use them, independently of the Agile coaches. We could teach other teams on the practices."
+   },
+   "E11": {
+       "question": "(EE11) Increase depth of Kanban implementation",
+       "answer0": "(0) We are not concious about improving our Kanban implementation, it may happen by chance.",
+       "answer1": "(1) We are deepening / improving our Kanban implementation. We consciously look at the KanSAs and try to improve our self-evaluation with the help of an Agile coach.",
+       "answer2": "(2) We improve independently from the Agile coaches."
+   },
+   "E12": {
+       "question": "(EE12) Moving focus from resource efficiency to flow efficiency",
+       "answer0": "(0) We are mainly focusing on being busy, not having flow. Work is assigned in a way that everybody has something to do. Flow efficiency is low and not discussed. Queues are filled with tickets. Tickets spend a long time in waiting states (excluding blockers).",
+       "answer1": "(1) We discuss flow efficiency as a metric to watch out for.",
+       "answer2": "(2) We focus on having flow and design our way of working to optimise for flow. We don't take specialisation into consideration when designing the workflow."
+   }
+}
